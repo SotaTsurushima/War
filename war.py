@@ -12,6 +12,7 @@ class Card:
         self.value = v
         self.suit = s
 
+    # 特殊method less than
     def __lt__(self, c2):
         if self.value < c2.value:
             return True
@@ -23,6 +24,7 @@ class Card:
                 return False
         return False
 
+    # 特殊method greater than
     def __gt__(self, c2):
         if self.value > c2.value:
             return True
@@ -37,3 +39,10 @@ class Card:
         v = self.values[self.value] + " of " \
             + self.suits[self.suit]
         return v
+
+card1 = Card(10, 2)
+card2 = Card(11, 3)
+print(card1 < card2)
+print(card1 > card2)
+print(card1)
+print(card2)
